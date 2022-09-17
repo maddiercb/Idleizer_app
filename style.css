@@ -110,6 +110,18 @@ input[type="join"] {
   text-align: center
 }
 
+input[type="create"] {
+  display: block;
+  width: 10%;
+  margin: 0em auto;
+  height: 1em;
+  font-size: 1rem;
+  background-color: #e4a997;
+  border-color: rgb(90, 88, 88);
+  min-width: 60px;
+  text-align: center
+}
+
 
 /* LANDING PAGE */
 .currentGames {
@@ -132,6 +144,17 @@ hr {
   width:100%;
 }
 
+
+.toCreate {
+  width: 80px;
+  height: 80px;
+  background-color: #e0c2b7;
+  border-color: #5b3628;
+  border-style: solid;
+  border-width: medium;
+  margin-left: 20px;
+  /* margin-right: auto; */
+}
 
 
 
