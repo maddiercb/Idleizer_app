@@ -55,7 +55,7 @@ h2{
 }
 h3{
   /* text-align: center; */
-  padding-left: 4.7%;
+  padding-left: 1%;
   font-size: 1.5em;
 }
 h4{
@@ -72,6 +72,7 @@ h5{
 
 
 form {
+  padding-left: 10%;
   /* width: 95%; */
   /* max-width: 500px;
   min-width: 300px; */
@@ -81,15 +82,28 @@ form {
 }
 
 fieldset {
+  padding-left: -40px;
+  /* margin-top: 20px: */
   border: none;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   /* border-bottom: 3px solid #3b3b4f; */
-  padding-left: 15px;
+  width: 90%;
 }
 
 input[type="submit"] {
   display: block;
-  width: 60%;
+  width: 10%;
+  /* margin: 1em auto; */
+  height: 1.5em;
+  font-size: 0.75rem;
+  background-color: #e4a997;
+  border-color: white;
+  min-width: 195px;
+}
+
+input[type="message"] {
+  display: block;
+  width: 100%;
   margin: 1em auto;
   height: 2em;
   font-size: 1.1rem;
@@ -223,6 +237,60 @@ hr {
     width: 50%;
     margin-top: 50px;
     margin-left: 45px;
+  }
+
+  #computerMoveone {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -290px;
+  }
+
+  #computerMovetwo {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -290px;
+  }
+
+  #computerMovethree {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -290px;
+  }
+
+  #computerMovefour {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -190px;
+  }
+
+  #computerMovefive {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -190px;
+  }
+
+  #computerMovesix {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -190px;
+  }
+
+  #computerMoveseven {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -90px;
+  }
+
+  #computerMoveeight {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -90px;
+  }
+
+  #computerMovenine {
+    position: relative;
+    margin-left: 20px;
+    margin-top: -90px;
   }
   
   h2 {
