@@ -38,11 +38,63 @@
       <div data-index="8" class="tile right-border"></div>
       <div data-index="9" class="tile"></div>
       <div id="strike" class="strike"></div>
+
+      <div id="computerMoveone" class = "hidden">
+        <h2 id="comp-move1">O</h2>
+      </div>
+      <div id="computerMovetwo" class = "hidden">
+        <h2 id="comp-move2">O</h2>
+      </div>
+      <div id="computerMovethree" class = "hidden">
+        <h2 id="comp-move3">O</h2>
+      </div>
+      <div id="computerMovefour" class = "hidden">
+        <h2 id="comp-move1">O</h2>
+      </div>
+      <div id="computerMovefive" class = "hidden">
+        <h2 id="comp-move2">O</h2>
+      </div>
+      <div id="computerMovesix" class = "hidden">
+        <h2 id="comp-move3">O</h2>
+      </div>
+      <div id="computerMoveseven" class = "hidden">
+        <h2 id="comp-move1">O</h2>
+      </div>
+      <div id="computerMoveeight" class = "hidden">
+        <h2 id="comp-move2">O</h2>
+      </div>
+      <div id="computerMovenine" class = "hidden">
+        <h2 id="comp-move3">O</h2>
+      </div>
+
     </div>
     <div id="game-over-area" class="hidden">
       <h2 id="game-over-text">Winner is X</h2>
       <button id="play-again">Play Again</button>
     </div>
+    <br>
+    <br>
+    <div id="connect" class="hidden">
+      <h3>Care to connect?</h3>
+      <form>  
+        <fieldset>
+          <div class="question-block">
+            <label for="css-questions">Reach out to your opponent!</label>
+          </div>      
+          <div class="answer">
+            <textarea id="css-questions" name="css-questions" rows="5" cols="24" placeholder="Sending a message will also send your opponent the contact information you entered when beginning your Idleizer session!"></textarea>
+          </div> 
+          <a href="../landing.html">
+            <input type="submit"/>
+          </a>
+        </fieldset>
+      </form>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
     <script src="tictactoe.js"></script>
   </body>
 </html>
