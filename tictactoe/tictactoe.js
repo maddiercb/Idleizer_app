@@ -11,6 +11,7 @@ const strike = document.getElementById("strike");
 const gameOverArea = document.getElementById("game-over-area");
 const gameOverText = document.getElementById("game-over-text");
 const playAgain = document.getElementById("play-again");
+let availableTiles = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 playAgain.addEventListener("click", startNewGame);
 
 
@@ -39,8 +40,8 @@ function tileClick(event) {
     return;
   }
 
-  const tile = event.target;
-  const tileNumber = tile.dataset.index;
+  const tile = event.target; // const to let
+  const tileNumber = tile.dataset.index;  // const to let
   if (tile.innerText != "") {
     return;
   }
@@ -48,12 +49,54 @@ function tileClick(event) {
   if (turn === PLAYER_X) {
     tile.innerText = PLAYER_X;
     boardState[tileNumber - 1] = PLAYER_X;
+    availableTiles.splice(tileNumber - 1, tileNumber - 1);
+    console.log(availableTiles);
     turn = PLAYER_O;
   } else {
     tile.innerText = PLAYER_O;
     boardState[tileNumber - 1] = PLAYER_O;
     turn = PLAYER_X;
   }
+  // [O_Move] == 4){
+  //   boardState[tileNumber - 1] = PLAYER_O;
+  //   computerMovefour.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 5){
+  //   boardState[tileNumber - 2] = PLAYER_O;
+  //   computerMovefive.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 6){
+  //   boardState[tileNumber - 3] = PLAYER_O;
+  //   computerMovesix.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 7){
+  //   boardState[tileNumber - 1] = PLAYER_O;
+  //   computerMoveseven.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 8){
+  //   boardState[tileNumblet O_Move = Math.floor(Math.random() * availableTiles.length);
+  // console.log(availableTiles[O_Move]);
+  // if(availableTiles[O_Move] == 1){
+  //   boardState[tileNumber - 1] = PLAYER_O;
+  //   computerMoveone.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 2){
+  //   boardState[tileNumber - 1] = PLAYER_O;
+  //   computerMovetwo.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 3){
+  //   boardState[tileNumber - 1] = PLAYER_O;
+  //   computerMovethree.className = "visible";
+  // }
+  // if(availableTileser - 2] = PLAYER_O;
+  //   computerMoveeight.className = "visible";
+  // }
+  // if(availableTiles[O_Move] == 9){
+  //   boardState[tileNumber - 3] = PLAYER_O;
+  //   computerMovenine.className = "visible";
+  // }
+  // turn = PLAYER_X;
+
 
   setHoverText();
   checkWinner();
@@ -92,8 +135,11 @@ function gameOverScreen(winnerText) {
     text = `Winner is ${winnerText}!`;
   }
   gameOverArea.className = "visible";
+  connect.className = "visible";
   gameOverText.innerText = text;
 }
+
+
 
 function startNewGame() {
   strike.className = "strike";
@@ -102,6 +148,7 @@ function startNewGame() {
   tiles.forEach((tile) => (tile.innerText = ""));
   turn = PLAYER_X;
   setHoverText();
+  availableTiles = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 }
 
 const winningCombinations = [
