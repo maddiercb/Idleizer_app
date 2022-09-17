@@ -1,0 +1,287 @@
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+    button {
+      margin: 15px; 
+    }
+    .facebook-btn {
+      font-size: 20px; 
+      border-radius: 2px; 
+    }
+
+    .facebook-style-dark {
+      box-shadow: inset 0px 2px 0 0px #4d73bf;
+      background: #4267b2; 
+      border: 1px solid #4267b2;
+      color: white; 
+      text-shadow: 0 1px 0 #3359a5; 
+    } 
+
+    .btn-3d {
+      position: relative;
+      /* position: absolute; 
+      top: 100px; 
+      left: 100px;  */
+      background-color: orangered;
+      border: none; 
+      outline: none;
+      padding: 15px 24px; 
+      color: white; 
+      font-size: 1.4rem; 
+      box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+    }
+
+      .btn-3d:active {
+        transform: translate(-3px, 3px);
+        box-shadow: -3px 3px 0  hsl(16, 100%, 30%)
+      }
+
+      .btn-3d::before {
+        position: absolute; 
+        content: '';
+        border-top: 6px solid transparent;
+        border-right: 6px solid hsl(16, 100%, 30%);
+        border-bottom: 6px solid transparent;
+        /* border-left: 6px solid transparent; */
+        top: 0; 
+        left: -6px; 
+      } 
+
+      .btn-3d::after {
+        position: absolute; 
+        content: '';
+        border-top: 6px solid hsl(16, 100%, 30%);
+        border-right: 6px solid transparent;
+        /* border-bottom: 6px solid hsl(16, 100%, 30%); */
+        border-left: 6px solid transparent;
+        bottom: -6px; 
+        right: -0px; 
+      }
+      
+      .btn-3d:active::before {
+        border-top: 3px solid transparent;
+        border-right: 3px solid hsl(16, 100%, 30%);
+        border-bottom: 3px solid transparent;
+        left: -3px; 
+      }
+      
+       .btn-3d:active::after {
+        border-top: 3px solid hsl(16, 100%, 30%);
+        border-right: 3px solid transparent;
+        /* border-bottom: 6px solid hsl(16, 100%, 30%); */
+        border-left: 3px solid transparent;
+        bottom: -3px; 
+       }  
+       /* BUTTON 3D numer 2*/ 
+
+       .btn-3d-2 {
+          position: relative; 
+          /* background: #ecd300; */
+          background: radial-gradient(hsl(54,100%,50%), hsl(54,100%, 40%));
+          background: -webkit-radial-gradient(hsl(54, 100%, 50%), hsl(54,100%, 40%));
+
+          font-size: 1.4rem; 
+          text-shadow: 0px 1px 0 #c3af07;
+          color: white; 
+          border: 1px solid hsl(54, 100%, 20%);
+          height: 120px; 
+          width: 120px; 
+          z-index: 4; 
+          border-radius: 50%;
+          outline: none; 
+
+          box-shadow: inset 0 1px 0 hsl(54, 100%, 30%), 
+                            0 2px 0 hsl(54, 100%, 20%), 
+                            0 3px 0 hsl(54, 100%, 20%), 
+                            0 4px 0 hsl(54, 100%, 20%),
+                            0 5px 0 hsl(54, 100%, 15%),
+                            0 6px 0 hsl(54, 100%, 12%)
+       }  
+
+       .btn-3d-2:active {
+         top: 3px; 
+         box-shadow: inset  0 1px 0 hsl(54, 100%, 30%), 
+                            0 2px 0 hsl(54, 100%, 20%), 
+                            0 3px 0 hsl(54, 100%, 20%)
+       }
+
+       /* Gradient button */ 
+       .gradient-1 {
+
+        position: relative; 
+        z-index: 1;
+        padding: 20px 40px;
+        font-size: 1.4rem; 
+        box-sizing: border-box;
+        background-color: #e7eef1;
+        border: solid 10px transparent;
+        border-image: linear-gradient(to top right, orangered, yellow);
+        background-color: white;
+        border-image-slice: 1; 
+        transition: all .3s ease-out; 
+        color: orangered;
+       }
+
+       .gradient-1:hover {
+        background-image: linear-gradient(to top right, orangered, yellow);
+        color: white;        
+       }
+       /* Gradient button -2 */
+
+       .gradient-2 {
+          position: relative; 
+          z-index: 1;
+          padding: 20px 40px;
+          font-size: 1.4rem; 
+          box-sizing: border-box;
+          background-color: #e7eef1;
+          border: solid 4px transparent;
+          border-image: linear-gradient(to right, orangered, transparent);
+          border-image-slice: 1; 
+          background-color: white;
+          transition: all .3s ease-out; 
+          color: orangered;
+       }
+
+       .gradient-2:hover {
+        background-image: linear-gradient(to right, orangered, transparent);
+        color: white; 
+        border-right-style: none;
+       }
+
+       /* Animated button */ 
+       .animated-button {
+          position: relative; 
+          padding: 20px 40px; 
+          font-size: 1.1rem;
+          border: 3px solid darkcyan; 
+          color: darkslateblue; 
+          background-color: white;
+          transition: all .3s linear; 
+       }
+
+       .animated-button:hover {
+         padding: 20px 60px 20px 20px; 
+       }
+
+       .animated-button::after {
+         position: absolute; 
+         right: 0px; 
+         content: '>>';
+         color: darkblue; 
+         font-size: 16px; 
+         opacity: 0; 
+         transition: all .3s ease-in-out; 
+       }
+
+       .animated-button:hover:after {
+         right: 15px; 
+         opacity: 1; 
+       }
+
+       /* Toggle buttons 
+          Css 3 lets me capture the label click
+       */ 
+       .final-toggle-label {
+         /* label style rest for browser compatibility */ 
+        font-family: Arial, Helvetica, sans-serif; 
+        display: inline-block; 
+        vertical-align: top;
+       }
+       
+       .final-toggle-input {
+          display: none; 
+        }
+       
+       .final-toggle-button {
+          position: relative; 
+          display: inline-block; 
+          font-size: 1rem; 
+          /* line-height: 20px;  */
+          text-transform: uppercase;
+          background-color: #f2319a;
+          border: solid 1px #f2395a;
+          color: white; 
+          width: 80px; 
+          height: 30px;   
+          transition: all .0.3s ease; 
+          cursor: pointer; 
+       }
+
+       .final-toggle-button::before {
+         position: absolute; 
+         top: 5px; 
+         left: 3px; 
+         line-height: 20px;  
+         content: "off"; 
+         display: inline-block; 
+         height: 20px; 
+         padding: 0 3px; 
+         background: white; 
+         color: #f2395a; 
+         transition: all 0.3s ease; 
+       }
+
+       .final-toggle-input:checked + .final-toggle-button::before {
+          left: 30px; 
+          content: "on"; 
+       }
+
+
+  </style>
+</head>
+<body>
+    <div class="btn-group">
+        <button>Apple</button>
+        <button>Samsung</button>
+        <button>Sony</button>
+    </div>
+  <button class="facebook-btn facebook-style-dark">Facebook button</button>
+  <hr/>
+  <button class="btn-3d">Button 3D</button>
+  <hr/>
+  <button class="btn-3d-2">Button 2D</button>
+  <hr/>
+  <button class="gradient-1">Gradient button</button>
+  <button class="gradient-2">Gradient button</button>
+  <hr/>
+  <button class="animated-button">Anmated button</button>
+  <hr/>
+
+  <label for="final-toggle-input" class="final-toggle-label">
+    <input type="checkbox" id="final-toggle-input" class='final-toggle-input'/>
+    <span class="final-toggle-button"></span>
+  </label>
+</body>
+</html>
