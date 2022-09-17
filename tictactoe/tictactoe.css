@@ -90,7 +90,7 @@ fieldset {
   width: 90%;
 }
 
-input[type="submit"] {
+input[type="connect"] {
   display: block;
   width: 10%;
   /* margin: 1em auto; */
